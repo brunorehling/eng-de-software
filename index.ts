@@ -27,7 +27,11 @@ while(true){
         case 2:
             frear(carro)
             break;
-            
+
+        case 5:
+            imprimirDados(carro);
+            break;
+
         default:
             break;
     }
@@ -54,6 +58,17 @@ function criaVeiculo(): Veiculo{
     veiculo.potencia = +teclado('Potência: ');
     veiculo.numeroMarchas = +teclado('Número de marchas: ');
     return veiculo;
+}
+
+function imprimirDados(veiculo: Veiculo): void{
+    console.log("########### DADOS DO VEÍCULO ###########");
+    console.log(`Marca: ${veiculo.marca}`);
+    console.log(`Modelo: ${veiculo.modelo}`);
+    console.log(`Potência: ${veiculo.potencia} cv`);
+    console.log(`Número de Marchas: ${veiculo.numeroMarchas}`);
+    console.log(`Marcha Atual: ${veiculo.marchaAtual}`);
+    console.log(`Velocidade Atual: ${veiculo.velocidade.toFixed(2)} km/h`);
+    console.log("########################################");
 }
 
 
